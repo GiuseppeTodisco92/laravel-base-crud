@@ -26,15 +26,15 @@
                 <td><img style="width: 100px" src="{{$comic->thumb}}" alt="{{$comic->title}}"></td>
                 <td>{{$comic->title}}</td>
                 <td>{{$comic->series}}</td>
-                <td>{{$comic->price}}</td>
-                <td>{{$comic->id}}</td>
+                <td>{{$comic->type}}</td>
+                <td>{{$comic->price}}€</td>
                 <td><a type="button" class="btn btn-primary" href="{{route('comics.show', $comic->id)}}">Visualizza</a></td>
-                
             </tr>              
           @endforeach
         </tbody>
       </table>
+      <td ><a type="button" class="btn btn-primary " href="{{route('comics.create')}}">Add new</a></td>
+
 </div>
     
-    @dump($comics)
 @endsection
